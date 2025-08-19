@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
  function mode(){
         const body = document.querySelector("body");
         const header = document.querySelector(".header-container");
-        const box = document.getElementsByClassName("extension");
+        const box = document.querySelectorAll(".extension");
         const sun = document.getElementsByClassName("sun");
         const moon = document.getElementsByClassName("moon");
         const icon = document.getElementsByClassName("icon-moon");
@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
          const active = document.getElementsByClassName("Active");
          const inActive = document.getElementsByClassName("Inactive");
          const all = document.getElementsByClassName("All");
+         
           
 
         icon[0].addEventListener(("click"),(event)=> {
@@ -32,10 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
            active[0].style.color = "white";
            inActive[0].style.backgroundColor = "hsl(226, 11%, 37%)";
            inActive[0].style.color = "white";
-           all[0].style.backgroundColor = "";
-           active.classList.toggle = "extension-control" 
-
-
+           
+           
             const box = Array.from(extension);
              const remove = Array.from(replace);
             
@@ -48,10 +47,14 @@ document.addEventListener('DOMContentLoaded', () => {
              remove.forEach((element) => {
             element.style.color = "white";
            });
-            
-             
-           
+        //    try{
+        //       console.log(box)
+        //    }
+        //    catch(error){
+        //     console.log(error)
+        //    }
 
+            
          }
          if(sun[0].contains(event.target)){
             sun[0].style.display="none";
@@ -78,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 element.style.color=""
             });
            remove.forEach((element) => {
-            element.style.color = "";
+            element.style.color = "green";
            });
 
           
@@ -87,7 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     
 
-     console.log(act)
  }
 
 

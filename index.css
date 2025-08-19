@@ -1,0 +1,201 @@
+/* CSS Reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Variable */
+:root{
+    /* ### Neutral */
+
+    --Neutral-900: hsl(227, 75%, 14%);
+    --Neutral-800: hsl(226, 25%, 17%);
+    --Neutral-700: hsl(225, 23%, 24%);
+    --Neutral-600: hsl(226, 11%, 37%);
+    --Neutral-300: hsl(0, 0%, 78%); 
+    --Neutral-200: hsl(217, 61%, 90%);
+    --Neutral-100: hsl(0, 0%, 93%); 
+    --Neutral-0:hsl(200, 60%, 99%);
+    
+    /* ### Red */
+
+    --Red-400: hsl(3, 86%, 64%);
+    --Red-500: hsl(3, 71%, 56%);
+    --Red-700: hsl(3, 77%, 44%);
+
+    /* ### Gradient */
+
+    --Light-Gradient: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    --Gradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--Neutral-200);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.body{
+    background-color: var(--Neutral-200);
+}
+.header-container{
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--Neutral-0);
+    align-items: center;
+    border-radius: 10px;
+}
+.headers{
+    background-color: var(--Neutral-0);
+}
+.header{
+    background-color: var(--Neutral-600);
+}
+.icon-moon{
+    background-color: var(--Neutral-100);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.section-heading h1{
+    font-size: 2em;
+}
+.section-heading{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+.extension-control{
+    display: flex;
+    gap: 2rem;
+}
+.sun{
+    display: none;
+}
+.moon{
+    display: flex;
+}
+.extension-control button:nth-child(1){
+    background-color: var(--Red-500);
+    color: var(--Neutral-0);
+}
+.dark-theme{
+    background-color: var(--Neutral-900);
+}
+
+.extension-control button:nth-child(2),
+.extension-control button:nth-child(3){
+    background-color: var(--Neutral-0);
+}
+.extension-control button{
+    padding: 0.6rem;
+    border: none;
+    border-radius: 15px;
+}
+.browser-extensions{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.extension{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--Neutral-0);
+    height: auto;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.extension .content{
+    display: flex;
+    gap: 20px;
+}
+.extension .controls{
+    display: flex;
+    justify-content: space-between;
+}
+
+.extension .controls button{
+    padding: 0.6rem;
+    border: 1px solid var(--Neutral-300);
+    border-radius: 15px;
+    background-color: transparent;
+}
+.toggle{
+    width: 50px;
+    height: 30px;
+    background-color: var(--Red-500);
+    border-radius: 15px;
+    padding: 0.5rem 0 0.5rem 0.3rem;
+    display: flex;
+    align-items: center;
+    
+
+    
+}
+.toggle-icon{
+    width: 20px;
+    height: 20px;
+    background-color: var(--Neutral-0);
+    border-radius: 50%;
+
+}
+.extension .controls span{
+    display:none;
+}
+.destiny{
+    background-color: var(--Neutral-300);
+    justify-content: right;
+    padding-right: .2rem;
+}
+.destiny:hover{
+    background-color: var(--Neutral-300);
+}
+.extension .controls
+ button:hover{
+ background-color: var(--Red-500);
+ color: var(--Neutral-0);
+}
+.extension-control button:nth-child(2):hover,
+.extension-control button:nth-child(3):hover{
+    color: var(--Neutral-600);
+    background-color: var(--Neutral-100);
+}
+.extension-controldark button:nth-child(2):hover,
+.extension-controldark button:nth-child(3):hover{
+    color: var(--Neutral-600);
+    background-color: var(--Neutral-100);
+}
+@media screen and (min-width:768px) {
+    body{
+        align-items: center;
+        padding-inline:0 ;
+    }
+    .header-container,
+    main{
+        width: 90%;
+    }
+    .section-heading{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .browser-extensions{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
